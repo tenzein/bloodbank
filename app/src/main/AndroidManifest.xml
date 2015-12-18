@@ -98,7 +98,7 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".helper.Message"
+            android:name=".Message"
             android:label="@string/title_activity_message"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>

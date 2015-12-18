@@ -356,6 +356,7 @@ public class Register extends AppCompatActivity
                 district = edtDis.getText().toString().trim();
                 phone = edtNumber.getText().toString().trim();
                 email = edtEmail.getText().toString().trim();
+
                dob = y+"/"+ m+"/" + d;
 
                 if (!fName.isEmpty() && !lName.isEmpty() && !username.isEmpty()
@@ -576,7 +577,8 @@ private boolean ValidPhone(String phone)
                 params.put("blood",blood);
                 params.put("street", street);
                 params.put("district", dis);
-
+//                params.put("cipher",cip);
+//                params.put("code", cod);
                 return params;
             }
 

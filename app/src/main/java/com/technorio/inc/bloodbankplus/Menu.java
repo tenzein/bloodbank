@@ -12,8 +12,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.technorio.inc.bloodbankplus.helper.Message;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
