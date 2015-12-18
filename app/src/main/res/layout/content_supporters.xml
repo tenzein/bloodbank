@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_supporters"
+    android:orientation="vertical"
+
+    tools:context="com.technorio.inc.bloodbankplus.Supporters">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="A Socil Initiative of:"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp" />
+
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:id="@+id/sparrow"
+        android:layout_margin="6dp"
+        android:background="@drawable/tech"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="SMS Partner"
+             android:textColor="#ffffff"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal" />
+        <ImageView
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:id="@+id/mega"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="6dp"
+        android:background="@drawable/mega" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Strategic Partner:"
+            android:textColor="#ffffff"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal" />
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:id="@+id/leadership"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="6dp"
+        android:background="@drawable/leadership" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Sms Partner:"
+            android:id="@+id/txtPartners"
+            android:textColor="#ffffff"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal" />
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:id="@+id/technorio"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="6dp"
+
+        android:background="@drawable/sparrow" />
+    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

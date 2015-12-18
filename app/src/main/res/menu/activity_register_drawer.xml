@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/register" android:icon="@drawable/register"
+            android:title="@string/registers" />
+        <item android:id="@+id/emergencyNumber" android:icon="@drawable/emergency"
+            android:title="@string/emergency" />
+        <!--<item android:id="@+id/supportUs" android:icon="@drawable/support"-->
+        <!--android:title="@string/support" />-->
+
+
+
+
+        <item android:id="@+id/AboutUs" android:icon="@android:drawable/ic_dialog_info"
+            android:title="@string/aboutus" />
+        <item android:id="@+id/supporter" android:icon="@drawable/supporters"
+            android:title="@string/supporters" />
+        <item android:id="@+id/team" android:icon="@drawable/team"
+            android:title="@string/team" />
+        <item android:id="@+id/howitworks" android:icon="@drawable/howitworks"
+            android:title="@string/works" />
+        <item android:id="@+id/disclaimer" android:icon="@android:drawable/ic_dialog_alert"
+            android:title="@string/discalimer" />
+
+
+    </group>
+</menu>

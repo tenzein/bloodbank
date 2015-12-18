@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">BloodBankPlus</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Hint for the edittext-->
+    <string name="hint_Fname">First Name</string>
+    <string name="hint_Lname">Last Name</string>
+    <string name="hint_username">Create Username</string>
+    <string name="hint_password">Enter Password</string>
+    <string name="hint_Vpassword">Re-Enter Password</string>
+    <string name="age">Enter Your Age</string>
+    <string name="sex">Gender</string>
+    <string name="street">Enter Street</string>
+    <string name="district">Enter District</string>
+    <string name="hint_email">Enter Your Email Address</string>
+    <string name="btn_link_to_login">Alreay Registered! Login Me</string>
+    <string name="dob">DOB</string>
+    <string name="registerContinue">Continue</string>
+    <string name="phone">Phone Number</string>
+    <string name="Address">Current Address</string>
+    <string name="bloodGroup">Blood Group</string>
+    <string name="btnRegister">Register</string>
+    <string name="welcome">Welcome to BloodBank +</string>
+    <string name="welcome2">Please Login to continue!</string>
+    <string name="login">Login</string>
+<string name="register">Register Here!</string>
+    <string name="title_activity_slidemenu">Blood Bank +</string>
+    <string name="appName">Blood Bank +</string>
+    <string name="title_activity_login">BloodBank +</string>
+    <string name="password">Enter your Password</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="title_activity_menu">Menu</string>
+
+    <string name="registers">Register</string>
+    <string name="emergency">Emergency Numbers</string>
+    <string name="support">Support Us</string>
+    <string name="about">About</string>
+    <string name="aboutus">About Us</string>
+    <string name="supporters">Our Supporters</string>
+    <string name="team">Our Team</string>
+    <string name="works">How it Works</string>
+    <string name="discalimer">Disclaimer</string>
+
+    <string name="moto"> A Social initiative of   </string>
+    <string name="title_activity_emergency_call">EmergencyCall</string>
+
+    <!-- emmergency call-->
+    <string name="RedCross">RedCross-01222222</string>
+    <string name="bloodbank">BloodBank-1010101</string>
+    <string name="title_activity_about_us">AboutUs</string>
+    <string name="title_activity_support_us">SupportUs</string>
+    <string name="title_activity_about__us">About_Us</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_supporters">Supporters</string>
+    <string name="title_activity_team">Team</string>
+    <string name="title_activity_howit_works">HowitWorks</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_register">Register</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_emergency">Emergency</string>
+    <string name="title_activity_working">Working</string>
+    <string name="title_activity_disclaimer">Disclaimer</string>
+
+<string name="companyemail">Email: help@bloodbankplus.org</string>
+    <string name="companyName">BloodBank+</string>
+    <string name="address">Address: 1st Floor,Siddhi Bhawan\nJamal,Kathmandu, Nepal</string>
+<string name="contact">Contact: 9860484858</string>
+<string name="txtterms">By Signing Up and Submitting your information, you hereby accept and provide exclusive authority to Bloodbank+ to display your name and telephone number, so that the needy could contactyou, as and when there is an emergency. You also hereby accept that you\'ll be governed by the terms and condition as set by Bloodbank+</string>
+
+<string name="abouts">Bloodbank+ \n\nImagine a situation when someone close to you is in the ICU. After an hour, the doctor rushes outside and tells you that you need to get AB –ve blood as early as possible, or else anything may happen. You rush to the nearest blood bank, call your relatives, your friends, but no one has it or if they do, are unwilling to help because they are afraid. You are confused, stressed, and afraid of losing someone so close to your heart. You then post in Social Media, but all in vain.\n\n
+Blood Bank+ is a platform that connects eligible and willing blood donors to people who need blood. With just few steps, you are connected with the perfect person who has and wants to donate the blood.\n\n
+Each and every one of you can be the part of the solution. All you have to do is register your account and be a Hero. Registering your account can be done via our website, Mobile App or SMS. We currently are in our first phase. In first phase, we\'ll be collecting data of donors and validating it. Because we\'re still working with our platform, we won\'t however be able to fulfill the blood request via our website (but you can always let us know if you need blood and we\'ll connect you to the probable donors). By the first or second week of January, 2016, we\'ll launch the fully functioning system. But for that, we need the records of Blood Donors.\n\n
+We thus want to ask you all to join this revolution.\n\n
+Your donation can make a difference of life or death to someone. Every time you donate blood, you are saving up to 3 lives. So stop making excuses and start donating blood. \n\n\n\n\n\n\n\n</string>
+    <string name="title_activity_user_profile">BloodBank+</string>
+
+    <string name="msg">For registering as a Blood Donor in our system. In first phase, we\'re collecting the data of donors like you. While anyone can register/signup as a donor anytime, we\'re initially collecting data so that we\'ll have ample of records of donors to fulfill the need of blood in future. We\'ll launch the full version by the second week of January, 2016.
+
+\n\nThank You and Keep Sharing the words!</string>
+    <string name="profile">Thank you\n\n In first phase, we\'re collecting the data of donors like you. While anyone can register/signup as a donor anytime, we\'re initially collecting data so that we\'ll have ample of records of donors to fulfill the need of blood in future. We\'ll launch the full version by the second week of January, 2016.
+
+    \n\nThank You and Keep Sharing the words!</string>
+     <string name="profile1">In first phase, we\'re collecting the data of donors like you. While anyone can register/signup as a donor anytime, we\'re initially collecting data so that we\'ll have ample of records of donors to fulfill the need of blood in future. We\'ll launch the full version by the second week of January, 2016.
+
+    \n\nThank You and Keep Sharing the words!</string>
+
+    <string name="year">Year</string>
+    <string name="hello_world">Hello</string>
+    <string name="title_activity_code_verify">CodeVerify</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_verify">Verify</string>
+    <string name="title_activity_mobile_verify">MobileVerify</string>
+    <string name="title_activity_message">Message</string>
+
+
+
+
+</resources>

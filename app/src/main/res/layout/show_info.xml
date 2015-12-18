@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@drawable/rounded_edittext"
+    android:gravity="center"
+    android:id="@+id/lin"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/imageView3">
+    <TextView
+        android:id="@+id/topdf"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:text="Found"
+        android:textColor="@color/theme_"
+        android:textSize="18sp" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/imageView3"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/lVDetails"
+        />
+
+    <ListView
+        android:id="@+id/lVDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView3"
+        android:divider="@color/theme_color"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+         />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingBottom="10dp"
+    >
+    <Button
+    android:id="@+id/btnOkSUP"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:text="OK"
+     android:background="@drawable/down_round_green"
+        android:layout_gravity="top"/>
+</LinearLayout>
+
+
+</LinearLayout>
