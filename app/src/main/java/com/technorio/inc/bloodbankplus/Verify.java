@@ -44,7 +44,7 @@ public class Verify extends AppCompatActivity {
 
     String status;
     String numbers;
-    String code;
+    String sts;
     String mCall;
     String imei;
     AQuery aq;
@@ -162,15 +162,18 @@ public class Verify extends AppCompatActivity {
             Toast.makeText(Verify.this, "Verified Status: "+info.verifiedstatus, Toast.LENGTH_SHORT).show();
             list.add(info);
             userid=info.app_user_id;
-        status = info.verifiedstatus;
+            status = info.verifiedstatus;
 
-            Bundle users = new Bundle();
-            users.putString("username", receives);
-            users.putString("status", status);
-            Intent profile = new Intent(Verify.this,userProfile.class);
-            profile.putExtras(users);
-            startActivity(profile);
-            finish();
+//            Bundle users = new Bundle();
+//            users.putString("username", receives);
+//            users.putString("status", status);
+//            Intent profile = new Intent(Verify.this,userProfile.class);
+//            profile.putExtras(users);
+//            startActivity(profile);
+//            finish();
+
+
+            updateStatus(status,receives);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -180,7 +183,7 @@ public class Verify extends AppCompatActivity {
 
     }
 
-    private void storeVerification(final String status) {
+    private void updateStatus(final String status, final String fName) {
 
 //        Tag used to canccel the request
         String tag_string_req = "req_register";
@@ -190,7 +193,7 @@ public class Verify extends AppCompatActivity {
 
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
-                AppConfig.URL_REGISTER, new Response.Listener<String>() {
+                AppConfig.URL_CODE_VERIFY, new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -206,17 +209,16 @@ public class Verify extends AppCompatActivity {
 //                        String uid = user.getString("uid");
                         String status = user.getString("status");
 
-                        // Inserting row in users table
 
                         Bundle users = new Bundle();
-                    users.putString("username", receives);
+                    users.putString("username", "Thank You "+ receives);
                     users.putString("status",status);
-            Intent profile = new Intent(Verify.this,userProfile.class);
-            profile.putExtras(users);
-            startActivity(profile);
-                    finish();
+                    Intent profile = new Intent(Verify.this,userProfile.class);
+                    profile.putExtras(users);
+                    startActivity(profile);
+                     finish();
 
-                        // Launch login activity
+
 
                     } else {
 
@@ -247,6 +249,7 @@ public class Verify extends AppCompatActivity {
                 // Posting params to register url
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("status", status);
+                params.put("fname", fName);
 
                 return params;
             }
@@ -268,4 +271,9 @@ public class Verify extends AppCompatActivity {
             pDialog.dismiss();
     }
 
+    @Override
+    public void onBackPressed() {
+      startActivity(new Intent(getApplicationContext(),Verify.class));
+        finish();
+    }
 }

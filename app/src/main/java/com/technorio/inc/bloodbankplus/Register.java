@@ -72,7 +72,7 @@ public class Register extends AppCompatActivity
     private String y,m,d;
 
     AQuery aq;
-    String number;
+    String firstName;
     String numbers;
     String code;
     String msdcal;
@@ -393,6 +393,7 @@ public class Register extends AppCompatActivity
         });
 
 
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -403,6 +404,7 @@ public class Register extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+//    calling the cognalys api
     private void verify() {
         imei= GeneralUtil.getImei(Register.this);
 
@@ -450,27 +452,103 @@ public class Register extends AppCompatActivity
 
             numbers=info.cipher;
             System.out.println(numbers);
-//            getNewNumber();
+
             msdcal=numbers.substring(12, 23);
             System.out.println(msdcal);
 
             code = msdcal.substring(6);
 
             System.out.println("verification code:" +code);
-            Bundle bundle = new Bundle();
-            bundle.putString("key", "Thank You "+fName);
-            bundle.putString("code", code);
-            bundle.putString("miscall",msdcal);
-            Intent intent = new Intent(Register.this, Verify.class);
-            intent.putExtras(bundle);
-//                        intent.putExtra("veri", "verify");
-            startActivity(intent);
-            finish();
+
+//            storing the response from the cognalys
+            storeVerification(numbers,code,blood);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
         return list;
     }
+
+    private void storeVerification(final String miscal, final String code,final String bld) {
+
+//        Tag used to canccel the request
+        String tag_string_req = "req_register";
+
+        pDialog.setMessage("Registering.....");
+        showDialog();
+
+
+        StringRequest strReq = new StringRequest(Request.Method.POST,
+                AppConfig.URL_VERIFY, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Log.d(TAG, "Verification Response:" + response.toString());
+                hideDialog();
+
+                try {
+                    JSONObject jObj = new JSONObject(response);
+                    boolean error = jObj.getBoolean("error");
+                    if (!error) {
+                        // Now store the user in sqlite
+                        String uid = jObj.getString("uid");
+                        System.out.println(uid);
+                        System.out.println(firstName);
+
+
+                        System.out.println("blood group"+bld);
+
+                        // Launch code verifying activity
+                        Bundle bundle = new Bundle();
+                        bundle.putString("key", firstName);
+                        bundle.putString("code", code);
+                        bundle.putString("miscall",msdcal);
+                        Intent intent = new Intent(Register.this, Verify.class);
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                        finish();
+                    } else {
+
+                        // Error occurred in registration. Get the error
+                        // message
+                        String errorMsg = jObj.getString("error_msg");
+                        Toast.makeText(getApplicationContext(),
+                                errorMsg, Toast.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e(TAG, "Verification Error: " + error.getMessage());
+                Toast.makeText(getApplicationContext(),
+                        error.getMessage(), Toast.LENGTH_LONG).show();
+                hideDialog();
+            }
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+                // Posting params to register url
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("cipher", miscal);
+                params.put("code",code);
+                params.put("blood", bld);
+
+                return params;
+            }
+
+        };
+
+        // Adding request to request queue
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+
+    }
+
 
     //    validating email id
 private boolean isValidEmail(String email)
@@ -532,9 +610,8 @@ private boolean ValidPhone(String phone)
 
                        Toast.makeText(Register.this,"You have Successfully registered with the username :" + fName,Toast.LENGTH_LONG).show();
 
-                        // Launch login activity
-                        String name = "Thank you" + fName;
-                    String verif_code = code;
+                        // Launch miscal activity
+                       firstName = fName;
                         verify();
 //
                     } else {
