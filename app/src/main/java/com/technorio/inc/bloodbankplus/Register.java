@@ -474,8 +474,8 @@ public class Register extends AppCompatActivity
 //        Tag used to canccel the request
         String tag_string_req = "req_register";
 
-        pDialog.setMessage("Registering.....");
-        showDialog();
+//        pDialog.setMessage("Registering.....");
+//        showDialog();
 
 
         StringRequest strReq = new StringRequest(Request.Method.POST,

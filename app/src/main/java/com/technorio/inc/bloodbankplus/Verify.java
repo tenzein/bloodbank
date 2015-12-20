@@ -217,7 +217,7 @@ public class Verify extends AppCompatActivity {
 //                    profile.putExtras(users);
 //                    startActivity(profile);
 //                     finish();
-                      storeAppID(userid,miscallNo);
+                      storeAppID(userid,receives);
 
 
                     } else {
@@ -261,7 +261,7 @@ public class Verify extends AppCompatActivity {
 
     }
 
-    private void storeAppID(final String id, final String mobile) {
+    private void storeAppID(final String id, final String username) {
 
 //        Tag used to canccel the request
         String tag_string_req = "req_register";
@@ -326,7 +326,7 @@ public class Verify extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting params to register url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("number", miscallNo);
+                params.put("username", username);
                 params.put("app_user_id", id);
 
                 return params;
