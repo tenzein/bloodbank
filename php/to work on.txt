@@ -1,0 +1,4 @@
+ everything is working fine. the response in the DB_Functions of the storeAppid(). in storeappid.php is Wrong creditentials. 
+solve the thing and  the app is ready to put in the hosting site.
+DB_FUnctions.php ko line 190 and 
+storeappid.php ko line 25  ma problem cha returning the else only. 
