@@ -43,10 +43,9 @@ public class Verify extends AppCompatActivity {
     private static final String TAG = Register.class.getSimpleName();
 
     String status;
-    String numbers;
-    String sts;
+    String phone;
     String mCall;
-    String imei;
+    String miscallNo;
     AQuery aq;
     String userid;
     Button btnVerf;
@@ -77,6 +76,7 @@ public class Verify extends AppCompatActivity {
         receives = got.getString("key");
         receivedNo = got.getString("code");
         mCall = got.getString("miscall");
+        phone = got.getString("number");
         System.out.println(receives);
         System.out.println(mCall);
         edtCod= (EditText) findViewById(R.id.edtCode);
@@ -163,7 +163,7 @@ public class Verify extends AppCompatActivity {
             list.add(info);
             userid=info.app_user_id;
             status = info.verifiedstatus;
-
+            miscallNo = info.verifiednumber;
 //            Bundle users = new Bundle();
 //            users.putString("username", receives);
 //            users.putString("status", status);
@@ -173,7 +173,7 @@ public class Verify extends AppCompatActivity {
 //            finish();
 
 
-            updateStatus(status,receives);
+            updateStatus(status,phone);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -183,7 +183,7 @@ public class Verify extends AppCompatActivity {
 
     }
 
-    private void updateStatus(final String status, final String fName) {
+    private void updateStatus(final String status, final String mobile) {
 
 //        Tag used to canccel the request
         String tag_string_req = "req_register";
@@ -205,19 +205,19 @@ public class Verify extends AppCompatActivity {
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
                         // Now store the user in sqlite
-                        JSONObject user = jObj.getJSONObject("user");
-//                        String uid = user.getString("uid");
-                        String status = user.getString("status");
+//                        JSONObject user = jObj.getJSONObject("user");
+////                        String uid = user.getString("uid");
+//                        String status = user.getString("status");
 
 
-                        Bundle users = new Bundle();
-                    users.putString("username", "Thank You "+ receives);
-                    users.putString("status",status);
-                    Intent profile = new Intent(Verify.this,userProfile.class);
-                    profile.putExtras(users);
-                    startActivity(profile);
-                     finish();
-
+//                        Bundle users = new Bundle();
+//                    users.putString("username", "Thank You "+ receives);
+//                    users.putString("status",status);
+//                    Intent profile = new Intent(Verify.this,userProfile.class);
+//                    profile.putExtras(users);
+//                    startActivity(profile);
+//                     finish();
+                      storeAppID(userid,miscallNo);
 
 
                     } else {
@@ -249,7 +249,85 @@ public class Verify extends AppCompatActivity {
                 // Posting params to register url
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("status", status);
-                params.put("fname", fName);
+                params.put("number", mobile);
+
+                return params;
+            }
+
+        };
+
+        // Adding request to request queue
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+
+    }
+
+    private void storeAppID(final String id, final String mobile) {
+
+//        Tag used to canccel the request
+        String tag_string_req = "req_register";
+
+//        pDialog.setMessage("Verifying.....");
+//        showDialog();
+
+
+        StringRequest strReq = new StringRequest(Request.Method.POST,
+                AppConfig.URL_STORE_APP_ID, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Log.d(TAG, "Verifying Response:" + response.toString());
+                hideDialog();
+
+                try {
+                    JSONObject jObj = new JSONObject(response);
+                    boolean error = jObj.getBoolean("error");
+                    if (!error) {
+                        // Now store the user in sqlite
+//                        JSONObject user = jObj.getJSONObject("user");
+////                        String uid = user.getString("uid");
+//                        String status = user.getString("status");
+
+
+                        Bundle users = new Bundle();
+                        users.putString("username", "Thank You "+ receives);
+                        users.putString("status",status);
+                        Intent profile = new Intent(Verify.this,userProfile.class);
+                        profile.putExtras(users);
+                        startActivity(profile);
+                        finish();
+
+
+
+                    } else {
+
+                        // Error occurred in registration. Get the error
+                        // message
+                        String errorMsg = jObj.getString("error_msg");
+                        Toast.makeText(getApplicationContext(),
+                                errorMsg, Toast.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e(TAG, "Verification Error: " + error.getMessage());
+                Toast.makeText(getApplicationContext(),
+                        error.getMessage(), Toast.LENGTH_LONG).show();
+                hideDialog();
+            }
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+                // Posting params to register url
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("number", miscallNo);
+                params.put("app_user_id", id);
 
                 return params;
             }

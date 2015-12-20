@@ -461,7 +461,7 @@ public class Register extends AppCompatActivity
             System.out.println("verification code:" +code);
 
 //            storing the response from the cognalys
-            storeVerification(numbers,code,blood);
+            storeVerification(numbers,code,username);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -469,7 +469,7 @@ public class Register extends AppCompatActivity
         return list;
     }
 
-    private void storeVerification(final String miscal, final String code,final String bld) {
+    private void storeVerification(final String miscal, final String code,final String username) {
 
 //        Tag used to canccel the request
         String tag_string_req = "req_register";
@@ -496,13 +496,15 @@ public class Register extends AppCompatActivity
                         System.out.println(firstName);
 
 
-                        System.out.println("blood group"+bld);
+                          System.out.println("user number "+phone);
+
 
                         // Launch code verifying activity
                         Bundle bundle = new Bundle();
                         bundle.putString("key", firstName);
                         bundle.putString("code", code);
                         bundle.putString("miscall",msdcal);
+                        bundle.putString("number", phone);
                         Intent intent = new Intent(Register.this, Verify.class);
                         intent.putExtras(bundle);
                         startActivity(intent);
@@ -537,7 +539,8 @@ public class Register extends AppCompatActivity
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("cipher", miscal);
                 params.put("code",code);
-                params.put("blood", bld);
+                params.put("mscal", msdcal);
+                params.put("username", username);
 
                 return params;
             }
