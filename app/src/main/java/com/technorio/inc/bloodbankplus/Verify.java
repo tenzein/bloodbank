@@ -283,8 +283,8 @@ public class Verify extends AppCompatActivity {
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
                         // Now store the user in sqlite
-//                        JSONObject user = jObj.getJSONObject("user");
-////                        String uid = user.getString("uid");
+                        JSONObject user = jObj.getJSONObject("user");
+                        String uid = user.getString("uid");
 //                        String status = user.getString("status");
 
 
