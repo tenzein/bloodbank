@@ -336,18 +336,7 @@ public class Verify extends AppCompatActivity {
 
     }
 
-    private void startThankyou()
-    {
-        System.out.println("startthank your class clal vyao");
-        Bundle users = new Bundle();
-        users.putString("username", "Thank You "+ receives);
-        users.putString("status",status);
-        Intent profile = new Intent(Verify.this,userProfile.class);
-        profile.putExtras(users);
-        startActivity(profile);
-        finish();
 
-    }
     private void showDialog() {
         if (!pDialog.isShowing())
             pDialog.show();

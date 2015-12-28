@@ -148,56 +148,56 @@ public class Emergency extends AppCompatActivity
         // Adding child data
         List<String> emergency = new ArrayList<String>();
         emergency.add("Police Control: 100");
-        emergency.add("Fire Brigade: 0101");
+        emergency.add("Fire Brigade: 101");
         emergency.add("Traffic Control Room: 103");
 
         List<String> police = new ArrayList<String>();
-        police.add("Police Headquarter Exchange, Naxal: 4411210 / 4410088");
-        police.add("Metropolitan Police Range (Bhaktapur): 6614821");
-        police.add("Metropolitan Police Range (Lalitpur): 5521207");
-        police.add("Metropolitan Police Range (Kathmandu): 4261945 / 4261790");
-        police.add("Police Emergency Number: 4228435 / 4226853");
+        police.add("Police Headquarter Exchange, Naxal: +97714411210 / +97714410088");
+        police.add("Metropolitan Police Range (Bhaktapur): +97716614821");
+        police.add("Metropolitan Police Range (Lalitpur): +97715521207");
+        police.add("Metropolitan Police Range (Kathmandu): +97714261945 / +97714261790");
+        police.add("Police Emergency Number: +97714228435 / +97714226853");
 
         List<String> ambulance = new ArrayList<String>();
-        ambulance.add("Paropakar Ambulance Service: 014260859");
-        ambulance.add("Lalitpur Redcross Ambulance Service: 015545666");
-        ambulance.add("Bishal Bazar Ambulance Service: 014244121");
-        ambulance.add("Redcross Ambulance Service: 014228094");
-        ambulance.add("Medicare National Hospital - Ambulance: 014467067");
-        ambulance.add("Nepal Red Cross Society: 014228094");
-        ambulance.add("Ambulance Paropakar: 014251614");
+        ambulance.add("Paropakar Ambulance Service: +97714260859");
+        ambulance.add("Lalitpur Redcross Ambulance Service: +977115545666");
+        ambulance.add("Bishal Bazar Ambulance Service: +977114244121");
+        ambulance.add("Redcross Ambulance Service: +977114228094");
+        ambulance.add("Medicare National Hospital - Ambulance: +977114467067");
+        ambulance.add("Nepal Red Cross Society: +977114228094");
+        ambulance.add("Ambulance Paropakar: +977114251614");
         ambulance.add("Nepal Ambulance Service: 102");
 
         List<String> hostpital = new ArrayList<String>();
-        hostpital.add("Vayodha Hospital: 4281666");
-        hostpital.add("Nepal Eye Bank: 4493684");
-        hostpital.add("Nepal Eye Hospital: 4250691");
-        hostpital.add("Tilganga Eye Hospital: 4423684");
-        hostpital.add("Bir Hospital: 4223807");
-        hostpital.add("Nepal Police Hospital: 4412430");
-        hostpital.add("TU Teaching Hospital: 4412404");
-        hostpital.add("Maternity Hospital: 4253276");
-        hostpital.add("Teku Hospital: 4253396");
-        hostpital.add("Patan Hospital: 5522278");
-        hostpital.add("Bhaktapur Hospital: 6610676");
-        hostpital.add("Mental Hospital: 5521333");
-        hostpital.add("Kanti Children Hospital: 4414798 / 4427452");
-        hostpital.add("Kathmandu Model Hospital: 4240805");
-        hostpital.add("B&B Hospital: 5533206");
-        hostpital.add("Medicare National Hospital: 4467067");
-        hostpital.add("Nepal Orthopaedic Hospital: 4493725");
-        hostpital.add("Kathmandu Medical College (Sinamangal): 4476152");
-        hostpital.add("Nepal Medical College (Jorpati): 4486008");
-        hostpital.add("Kantipur Dental Hospital, Maharajgunj :4371603");
-        hostpital.add("Kantipur Hospital, New Baneshwor: 4498757");
-        hostpital.add("Hospital and Research Centre :4476225");
-        hostpital.add("Norvic Hospital: 4258554");
-        hostpital.add("Martyr Gangalal National Heart Centre: 4371322");
-        hostpital.add("Life Care Hospital: 4227735");
-        hostpital.add("Miteri Hospital: 4280555");
-        hostpital.add("Capital Hospital: 4244022");
-        hostpital.add("Shree Satya Sai Centre: 4498035 ");
-        hostpital.add("National Kidney Centre: 6612266");
+        hostpital.add("Vayodha Hospital: +97714281666");
+        hostpital.add("Nepal Eye Bank: +97714493684");
+        hostpital.add("Nepal Eye Hospital: +97714250691");
+        hostpital.add("Tilganga Eye Hospital: +97714423684");
+        hostpital.add("Bir Hospital: +97714223807");
+        hostpital.add("Nepal Police Hospital: +97714412430");
+        hostpital.add("TU Teaching Hospital: +97714412404");
+        hostpital.add("Maternity Hospital: +97714253276");
+        hostpital.add("Teku Hospital: +97714253396");
+        hostpital.add("Patan Hospital: +97715522278");
+        hostpital.add("Bhaktapur Hospital: +97716610676");
+        hostpital.add("Mental Hospital: +97715521333");
+        hostpital.add("Kanti Children Hospital: +97714414798 / +97714427452");
+        hostpital.add("Kathmandu Model Hospital: +97714240805");
+        hostpital.add("B&B Hospital: +97715533206");
+        hostpital.add("Medicare National Hospital: +97714467067");
+        hostpital.add("Nepal Orthopaedic Hospital: +97714493725");
+        hostpital.add("Kathmandu Medical College (Sinamangal): +97714476152");
+        hostpital.add("Nepal Medical College (Jorpati): +97714486008");
+        hostpital.add("Kantipur Dental Hospital, Maharajgunj :+97714371603");
+        hostpital.add("Kantipur Hospital, New Baneshwor: +97714498757");
+        hostpital.add("Hospital and Research Centre : +97714476225");
+        hostpital.add("Norvic Hospital: +97714258554");
+        hostpital.add("Martyr Gangalal National Heart Centre: +97714371322");
+        hostpital.add("Life Care Hospital: +97714227735");
+        hostpital.add("Miteri Hospital: +97714280555");
+        hostpital.add("Capital Hospital: +97714244022");
+        hostpital.add("Shree Satya Sai Centre: +97714498035 ");
+        hostpital.add("National Kidney Centre: +97716612266");
         hostpital.add("");
         hostpital.add("");
         hostpital.add("");
@@ -205,7 +205,7 @@ public class Emergency extends AppCompatActivity
         hostpital.add("");
 
         List<String> bloodbank = new ArrayList<String>();
-        bloodbank.add("Blood Bank: 014225344");
+        bloodbank.add("Blood Bank: +977114225344");
 
 
         listDataChild.put(listDataHeader.get(0), emergency); // Header, Child data

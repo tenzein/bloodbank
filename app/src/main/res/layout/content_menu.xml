@@ -46,21 +46,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"><![CDATA[
 
 
             />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"/>
-            <!-- register button-->
+            ]]><!-- register button-->
             <Button
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:text="@string/btnRegister"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/button"
                 android:textColor="@color/white"
                 android:layout_height="match_parent"
@@ -73,7 +68,6 @@
                 android:id="@+id/btnEmergency"
                 android:layout_width="match_parent"
                 android:text="@string/emergency"
-                android:layout_marginBottom="10dp"
                 android:background="@drawable/button"
                 android:textColor="@color/white"
                 android:textSize="@dimen/btnTextSize"
@@ -86,7 +80,6 @@
                 android:text="@string/about"
                 android:background="@drawable/button"
                 android:textSize="@dimen/btnTextSize"
-                android:layout_marginBottom="20dp"
                 android:textColor="@color/white"
                 android:layout_height="match_parent"
                 android:textStyle="bold" />
@@ -101,10 +94,10 @@
                 android:layout_height="match_parent"
                 android:textStyle="bold" />
 
-         <Button
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:background="@android:color/transparent"/>
+         <!--<Button-->
+             <!--android:layout_width="match_parent"-->
+             <!--android:layout_height="match_parent"-->
+             <!--android:background="@android:color/transparent"/>-->
 
         </LinearLayout>
     </ScrollView>
