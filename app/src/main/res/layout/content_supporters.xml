@@ -29,13 +29,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="A Socil Initiative of:"
+        android:text="A Social Initiative of:"
         android:layout_gravity="center"
         android:textColor="#ffffff"
         android:layout_margin="10dp" />
 
     <ImageView
-        android:layout_width="240dp"
+        android:layout_width="210dp"
         android:layout_height="80dp"
         android:id="@+id/sparrow"
         android:layout_margin="6dp"
@@ -43,26 +43,27 @@
         android:layout_gravity="center_horizontal"
         android:padding="10dp" />
 </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="SMS Partner"
-             android:textColor="#ffffff"
-            android:layout_margin="10dp"
-            android:layout_gravity="center_horizontal" />
-        <ImageView
-        android:layout_width="240dp"
-        android:layout_height="80dp"
-        android:id="@+id/mega"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="6dp"
-        android:background="@drawable/mega" />
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Marketing Partner:"
+                    android:textColor="#ffffff"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_horizontal" />
+                <ImageView
+                    android:layout_width="210dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/mega"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/mega" />
+            </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,7 +78,7 @@
             android:layout_margin="10dp"
             android:layout_gravity="center_horizontal" />
     <ImageView
-        android:layout_width="240dp"
+        android:layout_width="210dp"
         android:layout_height="80dp"
         android:id="@+id/leadership"
         android:layout_gravity="center_horizontal"
@@ -99,7 +100,7 @@
             android:layout_margin="10dp"
             android:layout_gravity="center_horizontal" />
     <ImageView
-        android:layout_width="240dp"
+        android:layout_width="210dp"
         android:layout_height="80dp"
         android:id="@+id/technorio"
         android:layout_gravity="center_horizontal"
@@ -107,6 +108,26 @@
 
         android:background="@drawable/sparrow" />
     </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Supported By :"
+                    android:textColor="#ffffff"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_horizontal" />
+                <ImageView
+                    android:layout_width="210dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/openspace"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/openspace" />
+            </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
