@@ -275,7 +275,7 @@ public class Verify extends AppCompatActivity {
 
             @Override
             public void onResponse(String response) {
-                Log.d(TAG, "Verifying Response:" + response.toString());
+                Log.d(TAG, "APP store id Response:" + response.toString());
                 hideDialog();
 
                 try {
@@ -283,11 +283,8 @@ public class Verify extends AppCompatActivity {
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
                         // Now store the user in sqlite
-                        JSONObject user = jObj.getJSONObject("user");
-                        String uid = user.getString("uid");
-//                        String status = user.getString("status");
-
-
+//                        String uid = jObj.getString("uid");
+//                        System.out.println(uid);
                         Bundle users = new Bundle();
                         users.putString("username", "Thank You "+ receives);
                         users.putString("status",status);
@@ -295,7 +292,7 @@ public class Verify extends AppCompatActivity {
                         profile.putExtras(users);
                         startActivity(profile);
                         finish();
-
+//                        startThankyou();
 
 
                     } else {
@@ -338,6 +335,7 @@ public class Verify extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
 
     }
+
 
     private void showDialog() {
         if (!pDialog.isShowing())

@@ -187,8 +187,8 @@ class DB_Functions {
         $stmt->close();
 
         // check for successful store
-        if ($result) {
-            $stmt = $this->conn->prepare("SELECT user_name FROM mob_cognalys WHERE user_name = ?");
+       if ($result) {
+            $stmt = $this->conn->prepare("SELECT * FROM user WHERE user_name = ?");
             $stmt->bind_param("s", $us);
             $stmt->execute();
             $user = $stmt->get_result()->fetch_assoc();

@@ -19,21 +19,23 @@ if (isset($_POST['username']) && isset($_POST['app_user_id'])) {
     
 
             
-    // storing the verification details
-    $user = $db->storeAppid($app_id,$username);
+                 // storing the verification details
+                 $user = $db->storeAppid($app_id,$username);
 
-    if ($user != false) {
-        // use is found
-        $response["error"] = FALSE;
-        $response["error_msg"] = "Success";
-       
-        echo json_encode($response);
-    } else {
-        // user is not found with the credentials
-        $response["error"] = TRUE;
-        $response["error_msg"] = "Storing credentials are wrong. Please try again!";
-        echo json_encode($response);
-    }
+                          if ($user===FALSE) {
+                                        // user stored successfully
+                                        $response["error"] = TRUE;
+                                         $response["error_msg"] = "Unknown error occurred in registration!";
+                                        
+                                        echo json_encode($response);
+
+                                    } else {
+                                        // user failed to store
+                                        $response["error"] = FALSE;
+
+                                       $response["error_msg"] = "successfully registration";
+                                        echo json_encode($response);
+                                    }
 
 } else {
     // required post params is missing
