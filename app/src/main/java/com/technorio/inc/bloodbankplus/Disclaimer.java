@@ -65,7 +65,7 @@ private WebView webView;
                     "If you have any questions about this Privacy Policy or our information-handling practices, or if you would like to request information about our disclosure of personal information to third parties, please contact us by sending an email.<br>\n" +
                     "\n" +
                     "Blood Bank+\n<br>" +
-                    "support@bloodbankplus.com<br>\n" +
+                    "support@bloodbankplus.org<br>\n" +
                     "© 2015 Blood Bank Plus,<br> \n" +
                     "All rights reserved.<br>\n" +
                     "\n" +
