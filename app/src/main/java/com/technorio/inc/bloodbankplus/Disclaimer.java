@@ -148,10 +148,7 @@ private WebView webView;
             startActivity(new Intent(Disclaimer.this, Supporters.class));
             finish();
         }
-        else if (id == R.id.team) {
-            startActivity(new Intent(Disclaimer.this, Team.class));
-            finish();
-        }
+
         else if (id == R.id.howitworks) {
             startActivity(new Intent(Disclaimer.this, Working.class));
             finish();

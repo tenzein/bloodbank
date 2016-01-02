@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please Enter the last five digit number of the miscall Number"
+        android:text="Please Enter the last five digit number of the missed call Number"
         android:textColor="@color/light_white"
         android:textSize="18dp"
         android:layout_margin="8dp"

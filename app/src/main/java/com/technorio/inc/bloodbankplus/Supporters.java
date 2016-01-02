@@ -103,10 +103,7 @@ public class Supporters extends AppCompatActivity
 //            startActivity(new Intent(Supporters.this, SupportUs.class));
 //            finish();
 //        }
-        else if (id == R.id.team) {
-            startActivity(new Intent(Supporters.this, Team.class));
-            finish();
-        }
+
         else if (id == R.id.howitworks) {
             startActivity(new Intent(Supporters.this, Working.class));
             finish();

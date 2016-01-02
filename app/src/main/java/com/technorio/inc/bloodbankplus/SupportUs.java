@@ -93,10 +93,7 @@ public class SupportUs extends AppCompatActivity
             finish();
         }
 
-        else if (id == R.id.team) {
-            startActivity(new Intent(SupportUs.this, Team.class));
-            finish();
-        }
+
         else if (id == R.id.howitworks) {
             startActivity(new Intent(SupportUs.this, Working.class));
             finish();

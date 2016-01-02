@@ -273,10 +273,7 @@ public class Emergency extends AppCompatActivity
             startActivity(new Intent(Emergency.this, Supporters.class));
             finish();
         }
-        else if (id == R.id.team) {
-            startActivity(new Intent(Emergency.this, Team.class));
-            finish();
-        }
+
         else if (id == R.id.howitworks) {
             startActivity(new Intent(Emergency.this, Working.class));
             finish();

@@ -756,10 +756,7 @@ private boolean ValidPhone(String phone)
 //            startActivity(new Intent(Register.this, SupportUs.class));
 //            finish();
 //        }
-        else if (id == R.id.team) {
-            startActivity(new Intent(Register.this, Team.class));
-            finish();
-        }
+
         else if (id == R.id.supporter) {
             startActivity(new Intent(Register.this, Supporters.class));
             finish();

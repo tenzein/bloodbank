@@ -108,10 +108,7 @@ public class About extends AppCompatActivity
             startActivity(new Intent(About.this, Supporters.class));
             finish();
         }
-        else if (id == R.id.team) {
-            startActivity(new Intent(About.this, Team.class));
-            finish();
-        }
+
         else if (id == R.id.howitworks) {
             startActivity(new Intent(About.this, Working.class));
             finish();

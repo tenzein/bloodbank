@@ -131,10 +131,7 @@ public class Working extends AppCompatActivity
             startActivity(new Intent(Working.this, Supporters.class));
             finish();
         }
-        else if (id == R.id.team) {
-            startActivity(new Intent(Working.this, Team.class));
-            finish();
-        }
+
         else if (id == R.id.disclaimer) {
             startActivity(new Intent(Working.this, Disclaimer.class));
             finish();
